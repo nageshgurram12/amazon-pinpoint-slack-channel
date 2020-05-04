@@ -3,7 +3,7 @@ Description: Amazon Pinpoint Slack Channel.  This application will deliver Amazo
 Transform: AWS::Serverless-2016-10-31
 
 Parameters:
-  BOT_USER_TOKEN:
+  BOTUSERTOKEN:
     Type: String
     Description: BOT_USER_TOKEN for Slack application
 
@@ -23,7 +23,7 @@ Resources:
       Environment:
         Variables:
           BOT_USER_TOKEN:
-            Ref: BOT_USER_TOKEN
+            Ref: BOTUSERTOKEN
   PinpointInvokePermission:
     Type: AWS::Lambda::Permission
     Properties:
